@@ -2,9 +2,6 @@
 
 console.log('sono connesso');
 
-
-
-
 //array con oggetti
 
 const team = [
@@ -52,7 +49,7 @@ const team = [
 // debug
 // console.log(team)
 
-
+//stampiamo in console gli oggetti e le sue proprietà
  for (let  key in team){
      console.log(team[key].name, team[key].role, team[key].image)
  };
@@ -60,12 +57,16 @@ const team = [
 
 
 //variabili e creazioni di elementi
+const body = document.querySelector('body')
 const ul = document.getElementById('ul')
+const titleContainer = document.getElementById('title')
+
+
+titleContainer.classList.add('text-center', 'py-10','title-color')
+ul.classList.add('d-flex','row','justify-center','unstyled-list')
 
 //ciclo for per stampare su html
-
 for (let i = 0; i < team.length; i++) {
-    console.log(`sei qui ${team[i].name}, ${team[i].role}, ${team[i].image}`);
     
     //per ogni presente nell array team verrà creato un elemento 'li'
     //contenente un elemento h1 per il nome
@@ -77,10 +78,18 @@ for (let i = 0; i < team.length; i++) {
     const role = document.createElement('p')
     const image = document.createElement('img')
 
-    name.textContent = `name: ${team[i].name}`;
-    role.textContent = `role: ${team[i].role}`;
+    name.textContent = `${team[i].name}`;
+    role.textContent = `${team[i].role}`;
     image.src = team[i].image
     console.log(image.src)
+    li.append(image,name,role)
+    ul.append(li)
 
-    ul.append(li,name,role,image)
+    //aggiunta classi text center da css a html con javascript
+
+    li.classList.add('mx-5,col-m-33','py-10','mx-5')
+    name.classList.add('text-center','py-5','name-color')
+    role.classList.add('text-center','role-color')
 }
+
+
