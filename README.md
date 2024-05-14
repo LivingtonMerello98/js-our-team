@@ -18,3 +18,15 @@ Organizzare i singoli membri in card/schede
 Consigli del giorno:
 Ragioniamo come sempre a step.
 Prima la logica in italiano e poi traduciamo in codice.
+
+
+
+// inseriamo gli oggetti alli interno dell'array
+
+    const team = [
+        {
+            name:
+            role:
+            image:
+        } ...
+    ]
