@@ -30,3 +30,16 @@ Prima la logica in italiano e poi traduciamo in codice.
             image:
         } ...
     ]
+
+// per stampare le informazioni delgi oggetti presenti negli array
+    usiamo il metodo for each.
+
+    team.forEach(function(element)){
+        console.log(element.name, element.role, element.image)
+    }
+
+o anche
+
+// for (let key in team){
+    console.log(team.name, team.role, team.image);
+}

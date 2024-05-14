@@ -48,3 +48,8 @@ const team = [
 
 // debug
 console.log(team)
+
+
+for (let  key in team){
+    console.log(team[key].name, team[key].role, team[key].image)
+};
