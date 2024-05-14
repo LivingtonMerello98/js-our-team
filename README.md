@@ -20,7 +20,7 @@ Ragioniamo come sempre a step.
 Prima la logica in italiano e poi traduciamo in codice.
 
 
-
+Milestone 1
 // inseriamo gli oggetti alli interno dell'array
 
     const team = [
@@ -42,4 +42,30 @@ o anche
 
 // for (let key in team){
     console.log(team.name, team.role, team.image);
+}
+
+
+
+
+Milestone 2
+//iterare sull array con un ciclo for
+ //per ogni presente nell array team verrà creato un    elemento 'li'
+ //contenente un elemento h1 per il nome
+ //un elemento p per il ruolo
+ //un elemento img per l'immagine
+    
+for (let i = 0; i < team.length; i++) {
+    console.log(`sei qui ${team[i].name}, ${team[i].role}, ${team[i].image}`);
+    const li = document.createElement('li')
+    const name = document.createElement('h3')
+    const role = document.createElement('p')
+    const image = document.createElement('img')
+
+    name.textContent = `name: ${team[i].name}`;
+    role.textContent = `role: ${team[i].role}`;
+    image.src = team[i].image
+    console.log(image.src)
+
+    ul.append(li,name,role,image)
+
 }
